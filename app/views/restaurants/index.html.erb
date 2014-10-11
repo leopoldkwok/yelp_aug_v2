@@ -8,7 +8,8 @@
 		<%= link_to "Review #{restaurant.name}", new_restaurant_review_path(restaurant)%>
 		<ul>
 			<% restaurant.reviews.each do |review| %>
-				<li><%= "#{review.thoughts} (#{star_rating(review.rating)})"%>
+				<li><%= "#{review.thoughts} (#{star_rating(review.rating)})"%> - 
+					<em>Posted <%= time_ago_in_words(review.created_at) %> ago </em>
 				</li>
 			<% end %>
 		</ul>
