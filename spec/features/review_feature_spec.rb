@@ -6,15 +6,16 @@ describe 'reviewing restaurants' do
 	end
 
 	it 'allows users to leave reviews using a form, which appear alongside a restaurant' do 
-		visit '/restaurants'
-		click_link 'Review KFC'
-		fill_in 'Thoughts', with: 'so so'
-		select '3', from: 'Rating'
-		click_button 'Leave review'
+		leave_review('so so',3)
 
 		expect(current_path).to eq '/restaurants'
-		expect(page).to have_content 'so so (3)'
+		expect(page).to have_content 'so so (★★★☆☆)'
 	end
 
+	it 'display the average rating from all reviews' do 
+		leave_review('so so',3)
+		leave_review('great',5)
 
+		expect(page).to have_content 'Average rating: ★★★★☆'
+	end
 end
