@@ -5,5 +5,6 @@
  	has_many :endorsements
 
  	validates :rating, inclusion: VALID_RATINGS
- 	validates :restaurant_id, presence: true
+ 	validates :restaurant_id, presence: true 
+ 	# ensures the review has a restaurant //
  end
