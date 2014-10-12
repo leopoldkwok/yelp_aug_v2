@@ -7,8 +7,4 @@ module ReviewsHelper
 		('★' * rating.round) + ('☆' * remainder)
 	end
 
-
-
-
-
 end

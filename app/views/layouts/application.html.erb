@@ -3,7 +3,7 @@
 <head>
   <title>YelpAugV2</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
   <%= csrf_meta_tags %>
   <meta charset='utf8'>
 </head>
@@ -11,6 +11,8 @@
 
 	<%=notice%>
 	<%= yield %>
+
+<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 
 </body>
 </html>
