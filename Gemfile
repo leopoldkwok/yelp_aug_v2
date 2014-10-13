@@ -8,6 +8,9 @@ gem 'capybara'
 gem 'poltergeist'
 gem 'database_cleaner'
 
+gem 'devise'
+gem 'warden'
+
 end
 
 
@@ -47,4 +50,6 @@ gem 'spring',        group: :development
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+gem 'launchy', group: [:development, :test]
 

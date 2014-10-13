@@ -20,26 +20,14 @@ require 'rails_helper'
 			end
 		end
 
-	describe 'creating restaurants' do 
-		before(:each) do 
-			Restaurant.create(name: 'KFC')
-		end
 
-			it 'promps the user to fill out a form, then displays the new restaurant' do 
-				visit '/restaurants'
-				click_link 'Edit KFC'
-
-				fill_in 'Name', with: 'Kentucky Fried Chicken'
-				click_button 'Update Restaurant'
-
-				expect(page).to have_content 'Kentucky Fried Chicken'
-				expect(current_path).to eq '/restaurants'
-			end
-		end
 
 	describe 'deleting restaurants' do 
 		before(:each) do 
 			Restaurant.create(name: 'KFC')
+			alex = User.create(email: "a@a.com", password:"12345678", password_confirmation: "12345678")
+			login_as alex
+			
 		end
 
 		it 'removes restaurants when a user clicks a delete link' do 
