@@ -1,28 +1,53 @@
-== README
+Yelp Clone
+==========
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The creation of a Yelp clone was the project set for Week 9 at Makers Academy, which served as my introduction 
+to Ruby on Rails.
 
-Things you may want to cover:
+Objectives
+----------
+- Understanding the Rails framework folder structure
+- Using test driven development to drive the coding process
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Technologies used
+-----------------
+- Ruby
+- Rails
+- Capybara
+- Rspec
+- Devise
+- Postgresql
+- Bootstrap
+- Javascript
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+How to set it up
+-----------------
+
+```sh
+git clone git@github.com:leopoldkwok/yelp_aug_v2.git
+cd yelp_aug_v2
+bundle
+bin/rake db:setup
+```
+
+How to run it
+--------------
+```sh
+cd yelp_aug_v2
+bin/rails s
+```
+
+Visit localhost:3000 in your browser
+
+How to run tests
+----------------
+
+```sh
+cd yelp_aug_v2
+rspec
+```
+
+Areas of improvement
+--------------------
+- Front end styling
