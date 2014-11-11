@@ -1,32 +1,43 @@
+<main class='container'>
+	<div class="panel panel-default">
+      
 
+      	 
+    </div>
 
-<%=notice%>
+	<section class='row'>  
+
+	
 	<% if @restaurants.any? %>
 		<% @restaurants.each do |restaurant| %>
+
+	<article class='post col-sm-6 col-md-8 col-md-offset-2'>
+        <div class="panel panel-default">
+          <div class="panel-heading">
 
 		<!-- main section panel -->
 		
 			    	<!-- restaurant name and type of food -->
+
+          	<h3 class="panel-title">
 		<h2> <%=restaurant.name %></h2>
 
 
 
 
 
-		<h3>Average rating: <%=star_rating(restaurant.average_rating) %></h3> 
-		<%= link_to "Edit #{restaurant.name}", edit_restaurant_path(restaurant) %>
-		<%= link_to "Delete #{restaurant.name}", restaurant_path(restaurant), method: :delete%>
-
-		<% unless restaurant.has_been_reviewed_by?(current_user) %>
-			<%= link_to "Review #{restaurant.name}", new_restaurant_review_path(restaurant)%>
-		<% end %>	 
-		<ul>
+		<h5>Average rating: <%=star_rating(restaurant.average_rating) %></h5> 
+	</div>
 
 
 
+
+ <div class="panel-body">
+
+ 	  <ul class="mainlist">
 
 			<% restaurant.reviews.each do |review| %>
-				<li><%= "#{review.thoughts} (#{star_rating(review.rating)})"%> - 
+				<li class="eachlistitem"><%= "#{review.thoughts} (#{star_rating(review.rating)})"%>  
 					<em>Posted <%= time_ago_in_words(review.created_at) %> ago </em>
 					
 					<span class = 'endorsement_count'>
@@ -40,11 +51,26 @@
 			<% end %>
 		</ul>
 
+		     <div class="panel-footer"> 
+		<%= link_to "Edit #{restaurant.name}", edit_restaurant_path(restaurant) %>
+		<%= link_to "Delete #{restaurant.name}", restaurant_path(restaurant), method: :delete%>
+
+		<% unless restaurant.has_been_reviewed_by?(current_user) %>
+			<%= link_to "Review #{restaurant.name}", new_restaurant_review_path(restaurant)%>
+		<% end %>	 
+		       </div>
+            </div>
+          </div>
+      </article>
+
+
+
 	<% end %>
+	   </section>
 
 
 <% else %>
 	No restaurants yet
 <% end %>
 
-<%= link_to 'Add a restaurant', new_restaurant_path %> 
+</main>

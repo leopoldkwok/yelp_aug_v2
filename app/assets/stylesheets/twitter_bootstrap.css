@@ -4972,7 +4972,7 @@ a.list-group-item-danger.active:focus {
 }
 .panel {
   margin-bottom: 21px;
-  background-color: #4e5d6c;
+  background-color: white; /* ori #4e5d6c */
   border: 1px solid transparent;
   border-radius: 0;
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
@@ -4980,10 +4980,17 @@ a.list-group-item-danger.active:focus {
 }
 .panel-body {
   padding: 15px;
+   border-top: 1px solid black; /* i added */
+border-left: 1px solid black; /* i added */
+border-right: 1px solid black; /* i added */
+border-bottom: 1px solid black; /* i added */
 }
 .panel-heading {
   padding: 10px 15px;
-  border-bottom: 1px solid transparent;
+  border-bottom: 1px solid black;
+  border-top: 1px solid black; /* i added */
+  border-left: 1px solid black; /* i added */
+  border-right: 1px solid black; /* i added */
   border-top-right-radius: -1;
   border-top-left-radius: -1;
 }
@@ -5001,9 +5008,12 @@ a.list-group-item-danger.active:focus {
 }
 .panel-footer {
   padding: 10px 15px;
-  background-color: #485563;
-  border-top: 1px solid transparent;
-  border-bottom-right-radius: -1;
+  background-color: white; /* orig -grey #485563 */
+  border-top: 1px solid black; /* orig - transparent */
+  border-left: 1px solid black; 
+  border-right: 1px solid black; 
+  border-bottom: 1px solid black; 
+  border-bottom-right-radius: -1; /* -1 */
   border-bottom-left-radius: -1;
 }
 .panel > .list-group {
@@ -5162,7 +5172,7 @@ a.list-group-item-danger.active:focus {
   border-bottom: 0;
 }
 .panel-group .panel-heading + .panel-collapse > .panel-body {
-  border-top: 1px solid transparent;
+  border-top: 1px solid black; /* transparent */
 }
 .panel-group .panel-footer {
   border-top: 0;
@@ -6348,8 +6358,8 @@ label,
   border: none;
 }
 .panel-default > .panel-heading {
-  background-color: #485563;
-  color: #ebebeb;
+  background-color: white; /* orig - #485563 */ /* will go back to this */
+  color: black; /* - original */
 }
 .thumbnail {
   background-color: #4e5d6c;
