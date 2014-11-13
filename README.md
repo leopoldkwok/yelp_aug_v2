@@ -1,3 +1,4 @@
+[![Code Climate](https://codeclimate.com/github/leopoldkwok/yelp_aug_v2/badges/gpa.svg)](https://codeclimate.com/github/leopoldkwok/yelp_aug_v2)
 Yelp Clone
 ==========
 
