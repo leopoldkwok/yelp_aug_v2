@@ -3,7 +3,7 @@ Yelp Clone
 ===========
 
 The creation of a Yelp clone was the project set for Week 9 at Makers Academy, which served as my introduction 
-to Ruby on Rails.
+to Ruby on Rails. 
 
 Objectives
 ----------
