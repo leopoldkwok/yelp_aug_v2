@@ -1,6 +1,6 @@
 [![Code Climate](https://codeclimate.com/github/leopoldkwok/yelp_aug_v2/badges/gpa.svg)](https://codeclimate.com/github/leopoldkwok/yelp_aug_v2)
 Yelp Clone
-==========
+===========
 
 The creation of a Yelp clone was the project set for Week 9 at Makers Academy, which served as my introduction 
 to Ruby on Rails.
