@@ -1,96 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<html>
 <head>
-	<meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Leopold Kwok">
-    <meta name="author" content="Leopold Kwok">
-
   <title>Yelp Clone</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= stylesheet_link_tag    '/assets/stylesheets/twitter_bootstrap.css', media: 'all', 'data-turbolinks-track' => true %>
-
-<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-
+  <meta charset='utf8'>
+  <meta name="description" content="Yelp Project">
+  <meta name="author" content="Leopold Kwok">
 </head>
-
 <body>
 
- <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+
+
+<!-- YELP -->
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+      <a class="navbar-brand" href="/">Yelp Clone</a>
+      </div>
+      <div class="navbar-collapse collapse">
+        <form class="navbar-form navbar-right" role="form">
+
+  <%=notice%>
+  <% if user_signed_in? %>
+    Logged in as <%=current_user.email %>
+    <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class:"btn btn-md btn-danger", role:"button" %>
+    <%else%>
+    <%= link_to "Sign in", new_user_session_path, class:"btn btn-md btn-success", role:"button"  %>
+    <%= link_to "Sign up", new_user_registration_path,  class:"btn btn-md btn-warning",role:"button"  %>
+  <%end%>
+        </form>
+      </div><!--/.navbar-collapse -->
+    </div>
+  </div>
+
+<div class="jumbotron">
       <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="/">Yelp Clone</a>
-        </div>
-        <div class="collapse navbar-collapse">
-          <ul class="nav navbar-nav navbar-right">
+  <!--       <h1>Yelp-Clone</h1> -->
+          <br><br><h1><a href='/'>Yelp Clone</a></h1>
+          <h2>Write a Review</h2>
 
-	
+            <p>
+        <%= link_to 'Add a restaurant', new_restaurant_path, class: "btn btn-primary btn-lg btn-block"  %>
+      </p>
 
-	<% if user_signed_in? %>
-		<p>
-		<span class='navbar-text'>			
-		Logged in as <%=current_user.email %>
-		 </span>
-		<%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: 'btn btn-default navbar-btn' %></p>
-		 <%= link_to 'Edit user details', edit_user_registration_path, class: 'btn btn-default navbar-btn' %></p>
-		<%else%>
-		<p><%= link_to "Sign in", new_user_session_path , class: 'btn btn-default navbar-btn'%>
-		<%= link_to "Sign up", new_user_registration_path, class: 'btn btn-default navbar-btn' %></p>
-	<%end%>
-	 </ul>
-        </div><!--/.nav-collapse -->
+
+
+        <p>This project was created on the week 9 of <a href='http://www.makersacademy.com/' target='blank'>Makers Academy</a>. You can see the code on my <a href="https://github.com/leopoldkwok/yelp_aug_v2">Github</a></p> 
       </div>
     </div>
 
 
+  <%= yield %>
 
+<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 
-<div class="jumbotron">
-		  <h1><a href='/'>Yelp Clone</a></h1>
-			<h2>Write a Review</h2>
-
-			<p>
-				<%= link_to 'Create restaurant', new_restaurant_path, class: "btn btn-primary btn-lg btn-block"  %>
-			</p>
-
-			<h5>This project was created on the week 9 of <a href='http://www.makersacademy.com/' target='blank'>Makers Academy.</a> You can check the code on the <a href='https://github.com/leopoldkwok/Yelp' target='blank'>github page</a>.</h5>
-
-		</div>
-
-    <% if notice %>
-      <p class="alert alert-success alert-dismissible">
-      <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <%= notice %>
-      </p>
-    <% end %>
-    <% if alert %>
-      <p class="alert alert-danger alert-dismissible">
-      <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <%= alert %>
-      </p>
-    <% end %>
-
-
-
-
-
-
-	<%= yield %>
-
-
-
-    
-<! - Bootstrap - placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
 </body>
 </html>

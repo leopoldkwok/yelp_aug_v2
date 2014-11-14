@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+gem 'bootstrap-sass'
+gem 'autoprefixer-rails' 
+
 group :development, :test do 
 
 gem 'rspec-rails'
@@ -8,8 +11,12 @@ gem 'capybara'
 gem 'poltergeist'
 gem 'database_cleaner'
 
+
+
 gem 'devise'
 gem 'warden'
+gem 'bootswatch-rails'
+
 
 end
 

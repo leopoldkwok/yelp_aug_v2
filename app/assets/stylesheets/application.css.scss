@@ -1,0 +1,98 @@
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+body {
+	background-color: white; /* #E1E0B9 */
+  	color: black;/*  #84021c */
+}
+
+p { text-align: center;}
+
+
+
+
+a {
+  text-decoration: none;
+  color: #c41200; /* #84021c */
+
+}
+
+.panel-footer {
+ 
+}
+
+.eachlistitem {
+  list-style: none;
+}
+
+.navbar {
+  background-color: #c41200; /* orig - #E1E0B9 */
+}
+
+.addrest {
+  text-align: center;
+  font-size: 20px;
+}
+
+.jumbotron {
+  padding: 30px 15px;
+  margin-bottom: 30px;
+  color: inherit;
+  background-color: white; /* #eeeeee */
+}
+
+.navbar-inverse .navbar-brand {
+  color: white;
+}
+
+	.jumbotron h1, h2, h3, h5, .jumbotron .h2 {
+			text-align: center;
+	}
+  
+  .jumbotron h1,
+  .jumbotron .h1 {
+    font-size: 67.5px;
+  }
+
+
+  .panel-default > .panel-heading {
+  color: black;
+  background-color: white; /* whitesmoke; */
+  border-color: none; /* #dddddd */
+}
+
+.panel-footer {
+  padding: 10px 15px;
+  background-color: white; /* whitesmoke; */
+  border-top: 1px solid #dddddd;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+h2,
+.h2 {
+  font-size: 32px;
+}
+
+.btn {
+font-weight: 300;
+}
+
+.btn-block {
+display: block;
+width: 100%;
+}
+
+.btn-lg, .btn-group-lg > .btn {
+padding: 12px 24px;
+font-size: 19px;
+line-height: 1.33;
+border-radius: 0;
+}
+
+.btn-primary {
+color: #ffffff;
+background-color: #c41200;
+border-color: transparent;
+}
